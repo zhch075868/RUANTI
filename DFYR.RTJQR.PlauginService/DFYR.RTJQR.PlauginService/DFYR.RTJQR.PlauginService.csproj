@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B8E7A570-D45F-475E-910A-7E5421EAAF15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DFYR.RTJQR.PlauginService</RootNamespace>
+    <AssemblyName>DFYR.RTJQR.PlauginService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.2.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.App">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.App.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.Contracts">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.Core">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.DataEntity">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.DataEntity.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.Model">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.OrmEngine">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.OrmEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.ServiceFacade.KDServiceFx, Version=8.0.277.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.ServiceFacade.KDServiceFx.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.ServiceHelper">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.ServiceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.Web, Version=8.0.277.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.BOS.WebApi.ServicesStub, Version=8.0.277.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.BOS.WebApi.ServicesStub.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.CRM.App.Core">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.CRM.App.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.CRM.OPP.APP.Report">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.CRM.OPP.APP.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.AP.App.Core">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.FIN.AP.App.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.AP.App.Report">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.FIN.AP.App.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.AP.Business.PlugIn">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.FIN.AP.Business.PlugIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.AP.Contracts">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.FIN.AP.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.AP.Report.PlugIn">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.FIN.AP.Report.PlugIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.AP.ServiceHelper">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.FIN.AP.ServiceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.AR.App.Report">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.FIN.AR.App.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.Business.PlugIn">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.FIN.Business.PlugIn.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.FIN.ServiceHelper">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.FIN.ServiceHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Kingdee.K3.SCM.App.Purchase.Report">
+      <HintPath>..\..\..\..\Program Files (x86)\Kingdee\K3Cloud\WebSite\Bin\Kingdee.K3.SCM.App.Purchase.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FunctionPlugin\POXChangeEffective.cs" />
+    <Compile Include="FunctionPlugin\PriceListToQuotationTable.cs" />
+    <Compile Include="FunctionPlugin\PurchaseOederAuditToContract.cs" />
+    <Compile Include="FunctionPlugin\SalContractEffective.cs" />
+    <Compile Include="FunctionPlugin\SalOrderAuditToContract.cs" />
+    <Compile Include="OADateBasePush\BizGroupPush.cs" />
+    <Compile Include="OADateBasePush\CurrencyPush.cs" />
+    <Compile Include="OADateBasePush\OperatordetailsPush.cs" />
+    <Compile Include="OAWorkFlowPush\FeedMtrlPush.cs" />
+    <Compile Include="OAWorkFlowPush\ForecastPush.cs" />
+    <Compile Include="OAWorkFlowPush\InstockPush.cs" />
+    <Compile Include="OADateBasePush\CustomerPush.cs" />
+    <Compile Include="OADateBasePush\ExpensePush.cs" />
+    <Compile Include="OADateBasePush\MaterialPush.cs" />
+    <Compile Include="OADateBasePush\PriceCategoryPush.cs" />
+    <Compile Include="OADateBasePush\SupplierPush.cs" />
+    <Compile Include="OAWorkFlowPush\MovemtrlPush.cs" />
+    <Compile Include="OAWorkFlowPush\OutStockApplyPush.cs" />
+    <Compile Include="OAWorkFlowPush\PayapplyPush.cs" />
+    <Compile Include="OAWorkFlowPush\PayBillPush.cs" />
+    <Compile Include="OAWorkFlowPush\PayslipsPush.cs" />
+    <Compile Include="OAWorkFlowPush\PickMtrlPush.cs" />
+    <Compile Include="OAWorkFlowPush\PlanorderPush.cs" />
+    <Compile Include="OAWorkFlowPush\POXChangePush.cs" />
+    <Compile Include="OAWorkFlowPush\PRD_MOPush.cs" />
+    <Compile Include="OAWorkFlowPush\PriceCategoryPush.cs" />
+    <Compile Include="OAWorkFlowPush\PriceListPush.cs" />
+    <Compile Include="OAWorkFlowPush\PurchaseOrderPush.cs" />
+    <Compile Include="OAWorkFlowPush\RefundbillPush.cs" />
+    <Compile Include="OAWorkFlowPush\RequisitionPush.cs" />
+    <Compile Include="OAWorkFlowPush\ReturnMtrlPush.cs" />
+    <Compile Include="OAWorkFlowPush\ReturnNoticePush.cs" />
+    <Compile Include="OAWorkFlowPush\SalContractPush.cs" />
+    <Compile Include="OAWorkFlowPush\SalOutStockPush.cs" />
+    <Compile Include="OAWorkFlowPush\SubreqOrderPush.cs" />
+    <Compile Include="OAWorkFlowPush\TransferApplyPush.cs" />
+    <Compile Include="OAWorkFlowPush\XContract.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="report\ARTraceService.cs" />
+    <Compile Include="report\ContractDetailRptEx.cs" />
+    <Compile Include="report\ContractSummaryRptEx.cs" />
+    <Compile Include="report\POOrderTraceServiceEx.cs" />
+    <Compile Include="report\PurchaseOrderDetailRptEx.cs" />
+    <Compile Include="report\StatementEx.cs" />
+    <Compile Include="report\supStatementEx.cs" />
+    <Compile Include="report\TraceReportex.cs" />
+    <Compile Include="ReverseAmount\InstockReverse.cs" />
+    <Compile Include="ReverseAmount\MrbPush.cs" />
+    <Compile Include="ReverseAmount\PayablePush.cs" />
+    <Compile Include="ReverseAmount\PaymentReverse.cs" />
+    <Compile Include="ReverseAmount\ReturnPaymentReverse.cs" />
+    <Compile Include="RSAConvert.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="WebApi\GetBillNo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
